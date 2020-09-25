@@ -1,5 +1,5 @@
-﻿using Formulaire_entretien_camions_Cora.Tabs.Apercu;
-using Formulaire_entretien_camions_Cora.Widgets.Tabs.Apercu;
+﻿using Formulaire_entretien_camions_Cora.Widgets.Tabs.Apercu;
+using Formulaire_entretien_camions_Cora.Widgets.Controles;
 using System.Windows.Forms;
 
 namespace Formulaire_entretien_camions_Cora.Widgets.Vehicules
@@ -7,7 +7,7 @@ namespace Formulaire_entretien_camions_Cora.Widgets.Vehicules
     /// <summary>
     /// CheckBox contenant une immatriculation de vehicules.
     /// </summary>
-    class VehiculeCheckBox : CheckBox
+    public class VehiculeCheckBox : CheckBox
     {
         public VehiculeCheckBox(string text)
         {
@@ -21,28 +21,39 @@ namespace Formulaire_entretien_camions_Cora.Widgets.Vehicules
 
             this.CheckedChanged += (s, e) =>
             {
-                bool cbNonChecked = false;
                 ApercuDataGridView gridView = new ApercuDataGridView(); // création nouveau ApercuDataGridView
-                foreach (VehiculeCheckBox control in VehiculesGroupBox.VehiculesCollection)  // pour chaque CheckBox dans VehiculesGroupBox.VehiculesCollection
-                {
-                    if (control.Checked) // si CheckBox Checked
-                    {
-                        gridView.Rows.Add(control.Text);   // ajout de la ligne avec immatriculation
-                    }
-                    else   // si CheckBox non Checked
-                    {
-                        cbNonChecked = true;
-                    }
-                }
-                if (!cbNonChecked)   // si tous les CheckBox sont Checked
-                    MainForm.AllVehiculesRadioButton.Checked = true;    // coche AllVehiculesRadioButton
-                else
-                    MainForm.AllVehiculesRadioButton.Checked = false;  // décoche AllVehiculesRadioButton
 
-                ApercuTabPage.ApercuDataGridView = gridView;
+                CompleteWithVehicules(gridView); // ajout des lignes
+                ControlesCheckBox.CompleteWithControles(gridView); // ajout des colonnes
+
                 MainForm.MainTabControl.ApercuTabPage.Controls.Clear(); //vider l'onglet ApercuTabPage
                 MainForm.MainTabControl.ApercuTabPage.Controls.Add(gridView); // ajout de ApercuDataGridView dans ApercuTabPage
             };
+        }
+
+        /// <summary>
+        /// Ajoute les lignes correspondantes aux VehiculeCheckBox cochées issues de VehiculesGroupBox.VehiculesCollection
+        /// Les ajoute dans la ApercuDataGridView passée en paramètre.
+        /// </summary>
+        /// <param name="gridView">ApercuDataGridView accueillant les lignes</param>
+        public static void CompleteWithVehicules(ApercuDataGridView gridView)
+        {
+            bool cbNonChecked = false;
+            foreach (VehiculeCheckBox control in VehiculesGroupBox.VehiculesCollection)  // pour chaque CheckBox dans VehiculesGroupBox.VehiculesCollection
+            {
+                if (control.Checked) // si CheckBox Checked
+                {
+                    gridView.Rows.Add(control.Text);   // ajout de la ligne avec immatriculation
+                }
+                else   // si CheckBox non Checked
+                {
+                    cbNonChecked = true;
+                }
+            }
+            if (!cbNonChecked)   // si tous les CheckBox sont Checked
+                MainForm.AllVehiculesRadioButton.Checked = true;    // coche AllVehiculesRadioButton
+            else
+                MainForm.AllVehiculesRadioButton.Checked = false;  // décoche AllVehiculesRadioButton
         }
     }
 }

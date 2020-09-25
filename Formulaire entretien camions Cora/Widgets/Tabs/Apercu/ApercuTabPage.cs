@@ -14,7 +14,7 @@ namespace Formulaire_entretien_camions_Cora.Tabs.Apercu
         /// <summary>
         /// DataGridView gérant l'aperçu du tableau
         /// </summary>
-        public static ApercuDataGridView ApercuDataGridView { get; set; }
+        public ApercuDataGridView ApercuDataGridView { get; set; }
         public ApercuTabPage()
         {
             Name = NAME;

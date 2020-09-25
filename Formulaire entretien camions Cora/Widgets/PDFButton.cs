@@ -44,7 +44,7 @@ namespace Formulaire_entretien_camions_Cora.Controls
                         table.AddCell(colName);
                     }
 
-                    foreach (DataGridViewRow row in ApercuTabPage.ApercuDataGridView.Rows)
+                    foreach (DataGridViewRow row in MainForm.MainTabControl.ApercuTabPage.ApercuDataGridView.Rows)
                     {
                         //var subTab = new PdfPTable(1);
                         //subTab.AddCell((string)row.Cells[0].Value);
@@ -69,7 +69,7 @@ namespace Formulaire_entretien_camions_Cora.Controls
         private List<string> getColumnsNames()
         {
             List<string> columnsList = new List<string>();
-            foreach (ControlDataGridViewColumn col in ApercuTabPage.ApercuDataGridView.Columns)
+            foreach (ControlDataGridViewColumn col in MainForm.MainTabControl.ApercuTabPage.ApercuDataGridView.Columns)
             {
                 columnsList.Add(col.HeaderText);
             }
