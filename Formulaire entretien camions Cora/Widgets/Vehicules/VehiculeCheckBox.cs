@@ -26,6 +26,7 @@ namespace Formulaire_entretien_camions_Cora.Widgets.Vehicules
                 CompleteWithVehicules(gridView); // ajout des lignes
                 ControlesCheckBox.CompleteWithControles(gridView); // ajout des colonnes
 
+                MainForm.MainTabControl.ApercuTabPage.ApercuDataGridView = gridView; // Remplassement de MainForm.MainTabControl.ApercuTabPage.ApercuDataGridView par gridView 
                 MainForm.MainTabControl.ApercuTabPage.Controls.Clear(); //vider l'onglet ApercuTabPage
                 MainForm.MainTabControl.ApercuTabPage.Controls.Add(gridView); // ajout de ApercuDataGridView dans ApercuTabPage
             };
@@ -43,7 +44,7 @@ namespace Formulaire_entretien_camions_Cora.Widgets.Vehicules
             {
                 if (control.Checked) // si CheckBox Checked
                 {
-                    gridView.Rows.Add(control.Text);   // ajout de la ligne avec immatriculation
+                    gridView.Rows.Add(control.Text.Split(':')[0]);   // ajout de la ligne avec immatriculation
                 }
                 else   // si CheckBox non Checked
                 {

@@ -46,9 +46,9 @@ namespace Formulaire_entretien_camions_Cora.Controls
 
                     foreach (DataGridViewRow row in MainForm.MainTabControl.ApercuTabPage.ApercuDataGridView.Rows)
                     {
-                        //var subTab = new PdfPTable(1);
-                        //subTab.AddCell((string)row.Cells[0].Value);
-                        table.AddCell((string)row.Cells[0].Value);
+                        table.AddCell(((string)row.Cells[0].Value).Split(':')[0]);
+                        for (int i = 0; i < getColumnsNames().Count - 1; i++)
+                            table.AddCell("");
                     }
 
                     docPdf.Add(table);

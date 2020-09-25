@@ -26,6 +26,7 @@ namespace Formulaire_entretien_camions_Cora.Widgets.Controles
                 VehiculeCheckBox.CompleteWithVehicules(gridView); // ajout des lignes
                 CompleteWithControles(gridView); // ajout des colonnes
 
+                MainForm.MainTabControl.ApercuTabPage.ApercuDataGridView = gridView; // Remplassement de MainForm.MainTabControl.ApercuTabPage.ApercuDataGridView par gridView  
                 MainForm.MainTabControl.ApercuTabPage.Controls.Clear(); //vider l'onglet ApercuTabPage
                 MainForm.MainTabControl.ApercuTabPage.Controls.Add(gridView); // ajout de ApercuDataGridView dans ApercuTabPage
             };
