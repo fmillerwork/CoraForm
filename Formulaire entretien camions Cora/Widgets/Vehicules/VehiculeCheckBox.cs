@@ -23,8 +23,8 @@ namespace Formulaire_entretien_camions_Cora.Widgets.Vehicules
             {
                 ApercuDataGridView gridView = new ApercuDataGridView(); // création nouveau ApercuDataGridView
 
-                CompleteWithVehicules(gridView); // ajout des lignes
-                ControlesCheckBox.CompleteWithControles(gridView); // ajout des colonnes
+                AddVehiculesRows(gridView); // ajout des lignes
+                ControlesCheckBox.AddControlesColumns(gridView); // ajout des colonnes
 
                 MainForm.MainTabControl.ApercuTabPage.ApercuDataGridView = gridView; // Remplassement de MainForm.MainTabControl.ApercuTabPage.ApercuDataGridView par gridView 
                 MainForm.MainTabControl.ApercuTabPage.Controls.Clear(); //vider l'onglet ApercuTabPage
@@ -37,7 +37,7 @@ namespace Formulaire_entretien_camions_Cora.Widgets.Vehicules
         /// Les ajoute dans la ApercuDataGridView passée en paramètre.
         /// </summary>
         /// <param name="gridView">ApercuDataGridView accueillant les lignes</param>
-        public static void CompleteWithVehicules(ApercuDataGridView gridView)
+        public static void AddVehiculesRows(ApercuDataGridView gridView)
         {
             bool cbNonChecked = false;
             foreach (VehiculeCheckBox control in VehiculesGroupBox.VehiculesCollection)  // pour chaque CheckBox dans VehiculesGroupBox.VehiculesCollection
