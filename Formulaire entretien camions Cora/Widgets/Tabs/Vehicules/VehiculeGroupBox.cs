@@ -13,7 +13,7 @@ namespace Formulaire_entretien_camions_Cora.Widgets.Tabs.Vehicules
 
         public VehiculeGroupBox()
         {
-            initVGB();
+            InitVGB();
             BackColor = System.Drawing.SystemColors.InactiveCaption;
 
             Controls.AddRange(TypeRBCollection);
@@ -24,7 +24,7 @@ namespace Formulaire_entretien_camions_Cora.Widgets.Tabs.Vehicules
 
         public VehiculeGroupBox(string immatriculation, string type)
         {
-            initVGB();
+            InitVGB();
 
             foreach(var typeRB in TypeRBCollection)
             {
@@ -41,7 +41,7 @@ namespace Formulaire_entretien_camions_Cora.Widgets.Tabs.Vehicules
             Controls.Add(ImmatriculationTextBox);
         }
 
-        private void initVGB()
+        private void InitVGB()
         {
             Location = new System.Drawing.Point(3, 3);
             Size = new System.Drawing.Size(226, 80);
@@ -57,6 +57,14 @@ namespace Formulaire_entretien_camions_Cora.Widgets.Tabs.Vehicules
             var rbFrigo = new TypeRadioButton("Camion frigo", 111, 11);
 
             TypeRBCollection = new TypeRadioButton[] { rb6m3, rb11m3, rb17m3, rb20m3, rbRemorque, rbFrigo };
+        }
+
+        /// <summary>
+        /// Remet le compte de véhicules à 0.
+        /// </summary>
+        public static void ResetVCount()
+        {
+            _vehiculeCount = 0;
         }
     }
 }

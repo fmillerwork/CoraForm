@@ -15,21 +15,22 @@ namespace Formulaire_entretien_camions_Cora.Widgets.Tabs.Vehicules
             Location = new System.Drawing.Point(3, 3);
             Size = new System.Drawing.Size(714, 420);
 
-            for (int i = 0; i < 18; i++)
-            {
+            for (int i = 0; i < 27; i++)
                 Controls.Add(new VehiculeGroupBox());
-            }
+            
         }
 
         public VehiculesFlowLayoutPanel(List<Camion> liste)
         {
+            VehiculeGroupBox.ResetVCount(); // on reset le nombre de véhicules car on re remplit le VehiculesFlowLayoutPanel
+
             VehiculesCollection = Controls;
             AutoScroll = true;
             Dock = DockStyle.Top;
             Location = new System.Drawing.Point(3, 3);
             Size = new System.Drawing.Size(714, 420);
 
-            for (int i = 0; i < 18; i++)
+            for (int i = 0; i < 27; i++)
             {
                 if (i < liste.Count)
                     Controls.Add(new VehiculeGroupBox(liste[i].Immatriculation, liste[i].Type)); // création des VehiculeGroupBox plein

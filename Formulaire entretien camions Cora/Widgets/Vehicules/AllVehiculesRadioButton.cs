@@ -22,9 +22,6 @@ namespace Formulaire_entretien_camions_Cora.Widgets.Vehicules
                 foreach (VehiculeCheckBox control in VehiculesGroupBox.VehiculesCollection)  // pour chaque CheckBox dans ControlCollection (= Controls de MainTabControl)
                 {
                     control.Checked = true; // coche le CheckBox
-                    var column = new ControlDataGridViewColumn(control.Text);   // création nouvelle colonne avec HeaderText valant le Text de la CheckBox
-                    gridView.Columns.Add(column);   // ajout de la colonne dans le ApercuDataGridView
-
                 }
             };
 

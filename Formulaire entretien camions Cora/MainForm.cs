@@ -64,7 +64,7 @@ namespace Formulaire_entretien_camions_Cora
 
                 #region [ Création des VehiculesCheckBox]
 
-                MainForm.VehiculesGroupBox.Controls.Clear(); // clear du VehiculesGroupBox
+                VehiculesGroupBox.Controls.Clear(); // clear du VehiculesGroupBox
 
                 foreach (VehiculeGroupBox vehiculeGb in VehiculesFlowLayoutPanel.VehiculesCollection)
                 {
@@ -95,7 +95,7 @@ namespace Formulaire_entretien_camions_Cora
                         }
                     }
                 }
-                MainForm.AllVehiculesRadioButton.Checked = false;
+                AllVehiculesRadioButton.Checked = false;
 
                 #endregion
             }
