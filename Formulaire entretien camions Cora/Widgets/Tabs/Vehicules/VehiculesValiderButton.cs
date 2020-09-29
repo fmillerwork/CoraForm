@@ -55,7 +55,7 @@ namespace Formulaire_entretien_camions_Cora.Widgets.Tabs.Vehicules
 
                 _session.Save();
 
-                MainForm.AllVehiculesRadioButton.Checked = false;
+                MainForm.AllVehiculesGroupBox.AllVehiculesRadioBtn.Checked = false;
                 #endregion
 
 

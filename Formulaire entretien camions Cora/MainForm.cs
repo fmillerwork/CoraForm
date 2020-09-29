@@ -11,10 +11,10 @@ namespace Formulaire_entretien_camions_Cora
     public partial class MainForm : Form
     {
         public static MainTabControl MainTabControl { get; set; }
-        public static ControlesGroupBox ControlesGroupBox { get; set; }
+        public static CtrlsGroupBox ControlesGroupBox { get; set; }
         public static VehiculesGroupBox VehiculesGroupBox { get; set; }
-        public static AllControlesRadioButton AllControlesRadioButton { get; set; }
-        public static AllVehiculesRadioButton AllVehiculesRadioButton { get; set; }
+        public static AllCtrlsGroupBox AllCtrlsGroupBox { get; set; }
+        public static AllVehiculesGroupBox AllVehiculesGroupBox { get; set; }
         public static Session Session { get; set; }
 
         //public static Session Session;
@@ -26,22 +26,22 @@ namespace Formulaire_entretien_camions_Cora
 
             #region [ Ajout des composants ]
 
-            ControlesGroupBox = new ControlesGroupBox();
+            ControlesGroupBox = new CtrlsGroupBox();
             Controls.Add(ControlesGroupBox);
 
             MainTabControl = new MainTabControl();
             Controls.Add(MainTabControl);
 
-            AllControlesRadioButton = new AllControlesRadioButton();
-            Controls.Add(AllControlesRadioButton);
+            AllCtrlsGroupBox = new AllCtrlsGroupBox();
+            Controls.Add(AllCtrlsGroupBox);
 
             Controls.Add(_pdfButton);
 
             VehiculesGroupBox = new VehiculesGroupBox();
             Controls.Add(VehiculesGroupBox);
 
-            AllVehiculesRadioButton = new AllVehiculesRadioButton();
-            Controls.Add(AllVehiculesRadioButton);
+            AllVehiculesGroupBox = new AllVehiculesGroupBox();
+            Controls.Add(AllVehiculesGroupBox);
 
             #endregion
 
@@ -95,7 +95,7 @@ namespace Formulaire_entretien_camions_Cora
                         }
                     }
                 }
-                AllVehiculesRadioButton.Checked = false;
+                //AllVehiculesGroupBox.AllVehiculesRadioBtn.Checked = false;
 
                 #endregion
             }

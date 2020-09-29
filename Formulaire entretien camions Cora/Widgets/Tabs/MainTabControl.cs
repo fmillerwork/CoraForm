@@ -9,7 +9,7 @@ namespace Formulaire_entretien_camions_Cora.Widgets.Tabs
     /// </summary>
     public class MainTabControl : TabControl
     {
-        public const string NAME = "MainTabControl";
+        private const string NAME = "MainTabControl";
 
         public VehiculesTabPage VehiculesTabPage { get; set; }
         public ApercuTabPage ApercuTabPage { get; set; }

@@ -3,23 +3,21 @@ using System.Windows.Forms;
 
 namespace Formulaire_entretien_camions_Cora.Widgets.Controles
 {
-    public class AllControlesRadioButton : RadioButton
+    public class AllCtrlsRadioBtn : RadioButton
     {
-        public const string NAME = "allControlesCheckBox";
-        public const string TEXT = "Tous les contrôles";
-        public AllControlesRadioButton()
+        private const string NAME = "allControlesCheckBox";
+        private const string TEXT = "Tous les contrôles";
+        public AllCtrlsRadioBtn()
         {
             AutoSize = true;
             Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            Location = new System.Drawing.Point(35, 205);
             Name = NAME;
-            Size = new System.Drawing.Size(156, 24);
             Text = TEXT;
 
             this.Click += (s, e) =>
             {
                 ApercuDataGridView gridView = new ApercuDataGridView(); // création nouveau ApercuDataGridView
-                foreach (ControlesCheckBox control in ControlesGroupBox.ControlCollection)  // pour chaque CheckBox dans ControlCollection (= Controls de MainTabControl)
+                foreach (CtrlCheckBox control in CtrlsGroupBox.ControlCollection)  // pour chaque CheckBox dans ControlCollection (= Controls de MainTabControl)
                 {
                     control.Checked = true; // coche le CheckBox
 

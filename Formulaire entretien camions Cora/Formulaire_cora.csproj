@@ -52,7 +52,13 @@
   <ItemGroup>
     <Compile Include="Objects\Camion.cs" />
     <Compile Include="Objects\Session.cs" />
-    <Compile Include="Widgets\Vehicules\AllVehiculesRadioButton.cs">
+    <Compile Include="Widgets\Controles\AllCtrlsGroupBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Widgets\Vehicules\AllVehiculesGroupBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Widgets\Vehicules\AllVehiculesRadioBtn.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Widgets\Vehicules\VehiculeCheckBox.cs">
@@ -61,7 +67,7 @@
     <Compile Include="Widgets\Vehicules\VehiculesGroupBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Widgets\Controles\AllControlesRadioButton.cs">
+    <Compile Include="Widgets\Controles\AllCtrlsRadioBtn.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Widgets\Tabs\Apercu\ApercuDataGridView.cs">
@@ -71,10 +77,10 @@
     <Compile Include="Widgets\Tabs\Apercu\ApercuTabPage.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Widgets\Controles\ControlesCheckBox.cs">
+    <Compile Include="Widgets\Controles\CtrlCheckBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Widgets\Controles\ControlesGroupBox.cs">
+    <Compile Include="Widgets\Controles\CtrlsGroupBox.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Widgets\Tabs\Vehicules\ImmatriculationTextBox.cs">

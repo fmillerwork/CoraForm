@@ -8,8 +8,8 @@ namespace Formulaire_entretien_camions_Cora.Widgets.Vehicules
     /// </summary>
     public class VehiculesGroupBox : GroupBox
     {
-        public const string NAME = "vehiculesGroupBox";
-        public const string TEXT = "Véhicules";
+        private const string NAME = "vehiculesGroupBox";
+        private const string TEXT = "Véhicules";
         public static ControlCollection VehiculesCollection { get; set; }
         public VehiculesGroupBox()
         {
@@ -18,7 +18,7 @@ namespace Formulaire_entretien_camions_Cora.Widgets.Vehicules
             VehiculesCollection = Controls;
             Name = NAME;
             Text = TEXT;
-            Location = new System.Drawing.Point(204, 24);
+            Location = new System.Drawing.Point(200, 24);
             Size = new System.Drawing.Size(160, 450);
             Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular);
 
@@ -27,10 +27,8 @@ namespace Formulaire_entretien_camions_Cora.Widgets.Vehicules
             {
                 _vehiculeCount++;
                 if (vehiculeGb.ImmatriculationTextBox.Text != "")
-                {
                     Controls.Add(new VehiculeCheckBox(vehiculeGb.ImmatriculationTextBox.Text));
-                    // AJT CATEGORIE VEHICULE DANS LE TEXT
-                }
+                
             }
             #endregion
         }

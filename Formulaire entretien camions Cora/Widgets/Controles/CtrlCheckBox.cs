@@ -7,10 +7,10 @@ namespace Formulaire_entretien_camions_Cora.Widgets.Controles
     /// <summary>
     /// CheckBox contenant une tâche à effectuer (contrôle)
     /// </summary>
-    public class ControlesCheckBox : CheckBox
+    public class CtrlCheckBox : CheckBox
     {
         private static int _pos = 0;
-        public ControlesCheckBox(string label)
+        public CtrlCheckBox(string label)
         {
             Text = label;
             Dock = DockStyle.Top;
@@ -26,21 +26,21 @@ namespace Formulaire_entretien_camions_Cora.Widgets.Controles
                 VehiculeCheckBox.AddVehiculesRows(gridView); // ajout des lignes
                 AddControlesColumns(gridView); // ajout des colonnes
 
-                MainForm.MainTabControl.ApercuTabPage.ApercuDataGridView = gridView; // Remplassement de MainForm.MainTabControl.ApercuTabPage.ApercuDataGridView par gridView  
+                MainForm.MainTabControl.ApercuTabPage.ApercuDataGridView = gridView; // Remplacement de MainForm.MainTabControl.ApercuTabPage.ApercuDataGridView par gridView  
                 MainForm.MainTabControl.ApercuTabPage.Controls.Clear(); //vider l'onglet ApercuTabPage
                 MainForm.MainTabControl.ApercuTabPage.Controls.Add(gridView); // ajout de ApercuDataGridView dans ApercuTabPage
             };
         }
 
         /// <summary>
-        /// Ajoute les colonnes correspondantes aux ControlesCheckBox cochées issues de ControlesGroupBox.ControlCollection
+        /// Ajoute les colonnes correspondantes aux ControlesCheckBox cochées issues de CtrlsGroupBox.ControlCollection
         /// Les ajoute dans la ApercuDataGridView passée en paramètre.
         /// </summary>
         /// <param name="gridView">ApercuDataGridView accueillant les colonnes</param>
         public static void AddControlesColumns(ApercuDataGridView gridView)
         {
             bool cbNonChecked = false;
-            foreach (ControlesCheckBox control in ControlesGroupBox.ControlCollection)  // pour chaque CheckBox dans ControlesGroupBox.ControlCollection
+            foreach (CtrlCheckBox control in CtrlsGroupBox.ControlCollection)  // pour chaque CheckBox dans CtrlsGroupBox.ControlCollection
             {
                 if (control.Checked) // si CheckBox Checked
                 {
@@ -53,9 +53,9 @@ namespace Formulaire_entretien_camions_Cora.Widgets.Controles
                 }
             }
             if (!cbNonChecked)   // si tous les CheckBox sont Checked
-                MainForm.AllControlesRadioButton.Checked = true;  // coche AllControlesRadioButton
+                MainForm.AllCtrlsGroupBox.AllCtrlsRadioBtn.Checked = true;  // coche AllCtrlsRadioBtn
             else
-                MainForm.AllControlesRadioButton.Checked = false; // décoche AllControlesRadioButton
+                MainForm.AllCtrlsGroupBox.AllCtrlsRadioBtn.Checked = false; // décoche AllCtrlsRadioBtn
         }
     }
 }

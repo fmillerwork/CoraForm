@@ -3,17 +3,15 @@ using System.Windows.Forms;
 
 namespace Formulaire_entretien_camions_Cora.Widgets.Vehicules
 {
-    public class AllVehiculesRadioButton : RadioButton
+    public class AllVehiculesRadioBtn : RadioButton
     {
-        public const string NAME = "allVechiculesCheckBox";
-        public const string TEXT = "Tous les véhicules";
-        public AllVehiculesRadioButton()
+        private const string NAME = "allVechiculesCheckBox";
+        private const string TEXT = "Tous les véhicules";
+        public AllVehiculesRadioBtn()
         {
             AutoSize = true;
             Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular);
-            Location = new System.Drawing.Point(213, 480);
-            Name = NAME;
-            Size = new System.Drawing.Size(85, 17);
+            Name = NAME; 
             Text = TEXT;
 
             this.Click += (s, e) =>

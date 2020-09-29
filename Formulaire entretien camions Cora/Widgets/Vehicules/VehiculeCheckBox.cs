@@ -24,7 +24,7 @@ namespace Formulaire_entretien_camions_Cora.Widgets.Vehicules
                 ApercuDataGridView gridView = new ApercuDataGridView(); // création nouveau ApercuDataGridView
 
                 AddVehiculesRows(gridView); // ajout des lignes
-                ControlesCheckBox.AddControlesColumns(gridView); // ajout des colonnes
+                CtrlCheckBox.AddControlesColumns(gridView); // ajout des colonnes
 
                 MainForm.MainTabControl.ApercuTabPage.ApercuDataGridView = gridView; // Remplassement de MainForm.MainTabControl.ApercuTabPage.ApercuDataGridView par gridView 
                 MainForm.MainTabControl.ApercuTabPage.Controls.Clear(); //vider l'onglet ApercuTabPage
@@ -52,9 +52,9 @@ namespace Formulaire_entretien_camions_Cora.Widgets.Vehicules
                 }
             }
             if (!cbNonChecked)   // si tous les CheckBox sont Checked
-                MainForm.AllVehiculesRadioButton.Checked = true;    // coche AllVehiculesRadioButton
+                MainForm.AllVehiculesGroupBox.AllVehiculesRadioBtn.Checked = true;    // coche AllVehiculesRadioBtn
             else
-                MainForm.AllVehiculesRadioButton.Checked = false;  // décoche AllVehiculesRadioButton
+                MainForm.AllVehiculesGroupBox.AllVehiculesRadioBtn.Checked = false;  // décoche AllVehiculesRadioBtn
         }
     }
 }
