@@ -9,7 +9,6 @@ namespace Formulaire_entretien_camions_Cora.Widgets.Controles
     /// </summary>
     public class CtrlCheckBox : CheckBox
     {
-        private static int _pos = 0;
         public CtrlCheckBox(string label)
         {
             Text = label;
@@ -17,7 +16,7 @@ namespace Formulaire_entretien_camions_Cora.Widgets.Controles
 
             AutoSize = true;
             Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular);
-            Location = new System.Drawing.Point(23, 37);
+            Location = new System.Drawing.Point(5, 5);
             Size = new System.Drawing.Size(80, 24);
 
             this.CheckedChanged += (s, e) =>

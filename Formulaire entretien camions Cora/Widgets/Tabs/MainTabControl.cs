@@ -18,8 +18,7 @@ namespace Formulaire_entretien_camions_Cora.Widgets.Tabs
         {
             Name = NAME;
             Location = new System.Drawing.Point(411, 23);
-            Size = new System.Drawing.Size(725, 500);
-
+            Size = new System.Drawing.Size(800, 500);
             VehiculesTabPage = new VehiculesTabPage();
             ApercuTabPage = new ApercuTabPage();
 

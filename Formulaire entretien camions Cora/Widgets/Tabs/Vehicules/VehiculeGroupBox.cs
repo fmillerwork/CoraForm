@@ -44,7 +44,7 @@ namespace Formulaire_entretien_camions_Cora.Widgets.Tabs.Vehicules
         private void InitVGB()
         {
             Location = new System.Drawing.Point(3, 3);
-            Size = new System.Drawing.Size(226, 80);
+            Size = new System.Drawing.Size(250, 80);
             _vehiculeCount++;
             Text = "Véhicule " + _vehiculeCount;
             Name = "vehiculeGroupBox" + _vehiculeCount;

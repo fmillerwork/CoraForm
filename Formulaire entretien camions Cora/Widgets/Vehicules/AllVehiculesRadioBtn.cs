@@ -11,6 +11,7 @@ namespace Formulaire_entretien_camions_Cora.Widgets.Vehicules
         {
             AutoSize = true;
             Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular);
+            Location = new System.Drawing.Point(2, 10);
             Name = NAME; 
             Text = TEXT;
             Checked = false;
