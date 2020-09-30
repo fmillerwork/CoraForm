@@ -3,6 +3,7 @@ using Formulaire_entretien_camions_Cora.Widgets.Controles;
 using Formulaire_entretien_camions_Cora.Widgets.Tabs.Apercu;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
@@ -13,7 +14,8 @@ namespace Formulaire_entretien_camions_Cora.Controls
     {
         private const string NAME = "pdfButton";
         private const string TEXT = "Générer PDF";
-        private const string FILEPATH = @"S:\Bureau\Entretiens.pdf"; // CHANGER
+        private static string FILEPATH = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "Entretiens.pdf";
+        //private const string FILEPATH = @"S:\Bureau\Entretiens.pdf"; // CHANGER
         public PDFButton()
         {
             Name = NAME;
