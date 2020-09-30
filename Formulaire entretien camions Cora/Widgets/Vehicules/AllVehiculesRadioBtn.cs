@@ -13,6 +13,7 @@ namespace Formulaire_entretien_camions_Cora.Widgets.Vehicules
             Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular);
             Name = NAME; 
             Text = TEXT;
+            Checked = false;
 
             this.Click += (s, e) =>
             {
